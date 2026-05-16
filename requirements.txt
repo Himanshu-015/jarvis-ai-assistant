@@ -1,0 +1,26 @@
+import os
+import quote
+import re
+import sqlite3
+import struct
+import subprocess
+import time
+import webbrowser
+
+import eel
+import pyaudio
+import pyautogui
+from engine.command import speak
+from engine.config import ASSISTANT_NAME
+# Playing assiatnt sound function
+import pywhatkit as kit
+import pvporcupine
+
+def run_assistant():
+    speak("Hello, I am your assistant. How can I help you?")
+    while True:
+        command = listen()
+        if command:
+            perform_task(command)
+
+-webkit-backface-visibility: hidden;
